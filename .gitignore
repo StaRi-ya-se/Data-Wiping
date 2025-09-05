@@ -1,7 +1,10 @@
 # Node
 node_modules/
 npm-debug.log*
-package-lock.json
+
+# Keep lockfile (recommended)
+# If you really don’t want it, uncomment below:
+# package-lock.json
 
 # Generated files & secrets
 uploads.db
