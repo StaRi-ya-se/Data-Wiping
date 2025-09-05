@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Generated files & secrets
+uploads.db
+uploads/
+keys/
+*.pem
+
+# Editor + OS
+.vscode/
+.DS_Store
+Thumbs.db
