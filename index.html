@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Wipe Certificate Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Wipe Certificate Generator</h1>
+
+    <section class="card">
+      <h2>Login (API Key)</h2>
+      <input id="apikey" type="password" placeholder="Enter API Key" />
+      <!-- make sure button is explicitly non-submit -->
+      <button id="unlockBtn" type="button">Unlock Upload</button>
+      <!-- Add near the top around the login area or next to result -->
+      <button id="resetBtn" type="button" style="margin-left:10px; display:none">Reset / Back to Login</button>
+
+      <p id="keyMessage" class="hint"></p>
+      <p class="hint">Use the API key to enable uploads (server-side validation)</p>
+    </section>
+
+    <section class="card" id="uploaderSection" style="display:none">
+      <h2>Upload Wipe Report (PDF)</h2>
+      <input id="report" type="file" accept="application/pdf" />
+      <div class="row">
+        <label for="device">Device (optional)</label>
+        <input id="device" type="text" placeholder="/dev/sda" />
+      </div>
+      <div class="row">
+        <!-- ensure non-submit type -->
+        <button id="uploadBtn" class="primary" type="button">Upload & Generate QR</button>
+      </div>
+      <div id="result" class="result"></div>
+    </section>
+
+    <footer>Made for SIH — demo</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
